@@ -15,7 +15,7 @@ apm-server:
 
   # Enable secure communication between APM agents and the server. By default ssl is disabled.
   ssl:
-    enabled: true
+    enabled: false
 
     # Path to file containing the certificate for server authentication.
     # Needs to be configured when ssl is enabled.
@@ -24,6 +24,10 @@ apm-server:
     # Path to file containing server certificate key.
     # Needs to be configured when ssl is enabled.
     key: "/certs/apm-server.key"
+  
+  rum:
+    enabled: true
+    allow_origins: ['*']
 
 #================================ Outputs =================================
 
